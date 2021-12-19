@@ -19,12 +19,12 @@
 >we are starting our IoT journey by Hello World LED Blinking using the microcontroller Arduino UNO
 
 ## Components Required
-1) Arduino Uno Board
-2) USB Cable
-3) LED (Any Color) x 1 Nos
-4) 220 OHM Resistor X 1 Nos
-5) Breadboard
-6) Jumper Wires (Male to Male ) X 2 Nos
+1) Arduino Uno Board  
+2) USB Cable  
+3) LED (Any Color) x 1 Nos  
+4) 220 OHM Resistor X 1 Nos  
+5) Breadboard  
+6) Jumper Wires (Male to Male ) X 2 Nos  
 
 ## Circuit Diagram
 >![image](https://user-images.githubusercontent.com/65575529/146659142-75ecce8f-be09-4d77-a3a5-df4cb21e082e.png)
