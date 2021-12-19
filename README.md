@@ -32,7 +32,7 @@
 >![cir](https://user-images.githubusercontent.com/65575529/146659971-4683808c-2495-493e-b4d9-8b30ebb6f8ea.jpg)
 
 
-##Code
+## Code
 
 ```
  int ledPin = 9; //for define digital pin 9
@@ -56,7 +56,7 @@ void loop() {
 ## Output
 > The LED is blinked with a time interval of 1 second
 
-<iframe 
+<iframe width="560" height="315"
 src="https://user-images.githubusercontent.com/65575529/146659989-f970ace2-8ddc-40f1-a1d1-3a8c3bb18319.mp4"
 frameborder="0" 
 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
