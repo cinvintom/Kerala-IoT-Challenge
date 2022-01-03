@@ -80,7 +80,8 @@ allowfullscreen></iframe>
 ## Circuit Diagram
 ![traffic light](https://user-images.githubusercontent.com/65575529/147976179-3abaa884-c4fc-4ef0-a4b5-ccb97e9c7502.jpg)
 
->![cir](https://user-images.githubusercontent.com/65575529/146659971-4683808c-2495-493e-b4d9-8b30ebb6f8ea.jpg)
+![trafficlight 2](https://user-images.githubusercontent.com/65575529/147979370-63646366-d185-4c54-b813-931a617db978.jpg)
+
 
 
 ## Code
@@ -120,8 +121,8 @@ void loop()
 ## Output
 > The LED is blinked alternatively like a traffic light
 
-iframe width="560" height="315"
-src="https://user-images.githubusercontent.com/65575529/146659989-f970ace2-8ddc-40f1-a1d1-3a8c3bb18319.mp4"
+<iframe width="560" height="315"
+src="https://user-images.githubusercontent.com/65575529/147979458-9a51dab9-e971-4ce1-92a9-4c6d830328d5.mp4"
 frameborder="0" 
 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>
