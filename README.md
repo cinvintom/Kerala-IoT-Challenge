@@ -86,20 +86,33 @@ allowfullscreen></iframe>
 ## Code
 
 ```
- int ledPin = 9; //for define digital pin 9
-void setup() {
- 
- pinMode(ledPin, OUTPUT);//define ledPin as an OUTPUT
- 
+int redled = 8; // initialize digital pin 8.
+int yellowled =5; // initialize digital pin 5.
+int greenled = 2; // initialize digital pin 2.
+void setup()
+{
+  pinMode(redled, OUTPUT); // set the pin with red LED as “output”
+  pinMode(yellowled, OUTPUT); // set the pin with yellow LED as “output”
+  pinMode(greenled, OUTPUT);  // set the pin with green LED as “output”
 }
 
-void loop() {
-  
- digitalWrite(ledPin, HIGH);//set LED on
- delay(1000);//wait for 1000 millisecond or 1 second
- digitalWrite(ledPin, LOW);//set the LED off
- delay(1000);
- 
+void loop()
+{
+  digitalWrite(greenled, HIGH); // turn on green LED
+  delay(5000); // wait 5 seconds
+
+  digitalWrite(greenled, LOW); // turn off green LED
+  for(int i=0;i<3;i++) // blinks for 3 times
+  {
+    delay(500); // wait 0.5 second
+    digitalWrite(yellowled, HIGH); // turn on yellow LED
+    delay(500);
+    digitalWrite(yellowled, LOW); // turn off yellow LED
+  }
+  delay(500);
+  digitalWrite(redled, HIGH); // turn on red LED
+  delay(5000);
+  digitalWrite(redled, LOW); // turn off red LED
 }
 
 ```
