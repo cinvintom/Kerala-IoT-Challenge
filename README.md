@@ -125,6 +125,7 @@ void loop()
 <iframe width="560" height="315"
 src="https://user-images.githubusercontent.com/65575529/147979458-9a51dab9-e971-4ce1-92a9-4c6d830328d5.mp4"
 frameborder="0" 
+ allow="autoplay;"
 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>
 
