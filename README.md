@@ -74,7 +74,7 @@ allowfullscreen></iframe>
    - Yellow M5 LED x 1 Nos  
    - Green M5 LED x 1 Nos  
      
-4) 220 OHM Resistor X 1 Nos  
+4) 220 OHM Resistor X 3 Nos  
 5) Breadboard  
 6) Jumper Wires (Male to Male ) X 4 Nos  
 
@@ -129,4 +129,59 @@ frameborder="0"
 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>
 
+# Exp 3 : LED Chasing Effect
+>Lets create something different than just blinking.Now, we are going to do an LED chasing Effect which often we see in billboards composed of colorful LEDs.Lets simulate LED chasing effect.
+
+## Components Required
+1) Arduino Uno Board  
+2) USB Cable  
+3) LED (Any Color) x 6 Nos  
+4) 220 OHM Resistor X 6 Nos  
+5) Breadboard  
+6) Jumper Wires (Male to Male ) X 7 Nos  
+
+## Circuit Diagram
+>![chassingled](https://user-images.githubusercontent.com/65575529/147982393-3f7de39e-75dd-4a33-ad05-b5ce8cf77d57.jpg)
+
+
+>![chassingled 1](https://user-images.githubusercontent.com/65575529/147984256-e506289e-74b1-493e-bf39-91e353162bc2.jpg)
+
+
+## Code
+
+```
+int BASE = 2; // the I/O pin for the first LED
+int NUM = 6; // number of LEDs
+void setup()
+{
+  for(int i= BASE; i < BASE + NUM; i++)
+  {
+    pinMode(i,OUTPUT);   // set I/O pins as output
+  }
+}
+
+void loop()
+{
+  for(int i = BASE; i < BASE+NUM; i++)
+  {
+    digitalWrite(i, LOW);   // set I/O pins as “low”, turn off LEDs one by one.
+    delay(200);            // delay
+  }
+  for(int i = BASE; i < BASE+NUM; i++)
+  {
+    digitalWrite(i, HIGH);   // set I/O pins as “high”, turn on LEDs one by one.
+    delay(200);
+  }
+}
+
+```
+
+## Output
+> The LEDs are turning ON and OFF  one by one  giving a chassing effect.
+
+<iframe width="560" height="315"
+src="https://user-images.githubusercontent.com/65575529/147984271-15c6ac84-86ce-4f27-a67e-bfb62ce1d0c4.mp4"
+frameborder="0" 
+allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen></iframe>
 
