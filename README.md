@@ -69,10 +69,10 @@ allowfullscreen></iframe>
 ## Components Required
 1) Arduino Uno Board  
 2) USB Cable  
-3) LED 
+3) LED   
     - Red M5 LED x 1 Nos  
-    - Yellow M5 LED x 1 Nos
-    - Green M5 LED x 1 Nos
+    - Yellow M5 LED x 1 Nos  
+    - Green M5 LED x 1 Nos  
 4) 220 OHM Resistor X 1 Nos  
 5) Breadboard  
 6) Jumper Wires (Male to Male ) X 4 Nos  
