@@ -62,3 +62,55 @@ frameborder="0"
 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>
 
+
+# Exp 2 : Traffic Light
+>we have done the LED blinking experiment with one LED.Now its time for an upgrade, we use 3 LEDs with different colors to simulate working of an Traffic light
+
+## Components Required
+1) Arduino Uno Board  
+2) USB Cable  
+3) LED 
+    - Red M5 LED x 1 Nos  
+    - Yellow M5 LED x 1 Nos
+    - Green M5 LED x 1 Nos
+4) 220 OHM Resistor X 1 Nos  
+5) Breadboard  
+6) Jumper Wires (Male to Male ) X 4 Nos  
+
+## Circuit Diagram
+![traffic light](https://user-images.githubusercontent.com/65575529/147976179-3abaa884-c4fc-4ef0-a4b5-ccb97e9c7502.jpg)
+
+>![cir](https://user-images.githubusercontent.com/65575529/146659971-4683808c-2495-493e-b4d9-8b30ebb6f8ea.jpg)
+
+
+## Code
+
+```
+ int ledPin = 9; //for define digital pin 9
+void setup() {
+ 
+ pinMode(ledPin, OUTPUT);//define ledPin as an OUTPUT
+ 
+}
+
+void loop() {
+  
+ digitalWrite(ledPin, HIGH);//set LED on
+ delay(1000);//wait for 1000 millisecond or 1 second
+ digitalWrite(ledPin, LOW);//set the LED off
+ delay(1000);
+ 
+}
+
+```
+
+## Output
+> The LED is blinked alternatively like a traffic light
+
+iframe width="560" height="315"
+src="https://user-images.githubusercontent.com/65575529/146659989-f970ace2-8ddc-40f1-a1d1-3a8c3bb18319.mp4"
+frameborder="0" 
+allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen></iframe>
+
+
