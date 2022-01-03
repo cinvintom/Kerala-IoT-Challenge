@@ -73,6 +73,7 @@ allowfullscreen></iframe>
    - Red M5 LED x 1 Nos  
    - Yellow M5 LED x 1 Nos  
    - Green M5 LED x 1 Nos  
+     
 4) 220 OHM Resistor X 1 Nos  
 5) Breadboard  
 6) Jumper Wires (Male to Male ) X 4 Nos  
