@@ -222,11 +222,7 @@ allowfullscreen></iframe>
 
 ### Breadboard Connection
 >![button_switch_1](https://user-images.githubusercontent.com/65575529/149670135-5faed472-4734-4c47-a3e3-4448e6710812.jpg)
-
-
->
-
-
+>![bswitch3](https://user-images.githubusercontent.com/65575529/149671192-804e6557-ffc0-44b4-a297-2e7177c003e8.jpg)
 
 ## Code
 
@@ -260,7 +256,7 @@ void loop()
 > The LED turns ON when the Button switch is PRESSED and turns OFF when the button is released.
 
 <iframe width="560" height="315"
-src="https://user-images.githubusercontent.com/65575529/147984271-15c6ac84-86ce-4f27-a67e-bfb62ce1d0c4.mp4"
+src="https://user-images.githubusercontent.com/65575529/149671162-1ec5bcbf-2e64-4d7f-8e36-45534cfa6994.mp4"
 frameborder="0" 
 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>
