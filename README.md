@@ -300,7 +300,7 @@ void loop()
 ```
 
 ## Output
-> The LED is blinked with a time interval of 1 second
+> The buzzer start making sound when the arduino is connected to the power supply. When RESET switch is pressed the buzzer restarted after 1 sec.
 
 <iframe width="560" height="315"
 src="https://user-images.githubusercontent.com/65575529/149672340-460ec5e3-e8bc-4bc4-b402-690c4b059678.mp4"
@@ -308,8 +308,85 @@ frameborder="1"
 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>
 
+# Exp 6 : RGB LED
+>In this expiriment we are going to learn how to add a RGB LED as OUTPUT in arduino circuit.
+
+## RGB LED
+>![tGwYE_3102_1628160546](https://user-images.githubusercontent.com/65575529/149672732-9c578614-0fb0-47fd-b0e5-5dd12d753cf8.png)
+>The RGB led consists of three different led’s, from the name you can guess that these led’s are red, green and blue. We can obtain many other colors by mixing up these colors.   
+>The Arduino has a analog write function which will help us in obtaining different colors for Arduino RGB led.
+####Pinout 
+>![image](https://user-images.githubusercontent.com/65575529/149673473-7e9c06eb-8cd8-44b6-9016-ba84e8574ca4.png)
 
 
+## Components Required
+1) Arduino Uno Board  
+2) USB Cable  
+3) RGB LED x 1 Nos   
+4) Breadboard  
+5) Jumper Wires (Male to Male ) X 5 Nos  
+
+## Circuit Diagram
+### Circuit
+>![rgb2](https://user-images.githubusercontent.com/65575529/149672805-1a75bdcd-2f97-4a4d-acb1-b2baff04cf27.png)
+
+### Breadboard Connection
+>![rgb1](https://user-images.githubusercontent.com/65575529/149674781-c9d78e24-3007-4103-9e73-8fb5457065fa.jpg)
+
+
+>![rgb4](https://user-images.githubusercontent.com/65575529/149674747-b65afd18-76ba-4c6f-addd-4694e8d95b2b.jpg)
+
+
+## Code
+
+```
+int redpin = 11; //select the pin for the red LED
+int bluepin = 10; //select the pin for the blue LED
+int greenpin = 9; //select the pin for the green LED
+int val;
+
+void setup()
+{
+  pinMode(redpin,OUTPUT);
+  pinMode(redpin,OUTPUT);
+  pinMode(redpin,OUTPUT);
+  Serial.begin(9600);//to begin serial communication
+}
+
+void loop()
+{
+  for(val=0;val<255;val++)
+  {
+    analogWrite(11, val);
+    analogWrite(10, 255-val);
+    analogWrite(9, 128-val);
+    delay(1);
+  }
+  Serial.println(val, DEC);
+}
+
+```
+
+## Output
+> The RGB LED started blinking in differend colours.
+
+<iframe width="560" height="315"
+src="https://user-images.githubusercontent.com/65575529/149674754-a64eba40-5a82-42ab-af19-88cd843172a8.mp4"
+frameborder="1" 
+allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen></iframe>
+
+
+
+
+
+
+
+
+
+https://user-images.githubusercontent.com/65575529/149674751-c1792491-1bd2-4233-b606-d02c192c55ae.mp4
+
+![rgb4](https://user-images.githubusercontent.com/65575529/149674756-dbe5d7c9-e55f-40f0-ac21-11d7cf93ca6e.jpg)
 
 
 
