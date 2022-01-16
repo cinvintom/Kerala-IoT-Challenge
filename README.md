@@ -259,3 +259,62 @@ frameborder="0"
 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>
 
+# Exp 5 : Buzzer
+>In this expiriment we are going to learn how to add a Buzzer as OUTPUT in arduino circuit for sound feedback.
+
+## Buzzer
+![gHdtK_3102_1628160269](https://user-images.githubusercontent.com/65575529/149671618-35d7097a-d164-4325-a644-529410974dd6.png)
+>An Arduino buzzer is also called a piezo buzzer. It’s a tiny speaker that you can connect to an Arduino board and make it sound the tone we set. The buzzer generates sound based on the reverse of the piezoelectric effect. Buzzers are used to make beep alarms and tones. They were designed to help technicians integrate their alarm systems or other automated systems for sound feedback.
+
+## Components Required
+1) Arduino Uno Board  
+2) USB Cable  
+3) Buzzer x 1 Nos   
+4) Breadboard  
+5) Jumper Wires (Male to Male ) X 2 Nos  
+
+## Circuit Diagram
+### Circuit
+>![e9Pdc_3102_1628160446](https://user-images.githubusercontent.com/65575529/149671705-09f74ef2-2603-4125-b601-3521b1615cb0.png)
+
+### Breadboard Connection
+>![buzzer1](https://user-images.githubusercontent.com/65575529/149672332-02ef2746-f2c2-4349-b977-35b1f3c9e248.jpg)
+
+>![buzzer2](https://user-images.githubusercontent.com/65575529/149672335-304f9762-5950-42cc-b67f-b827ccc0457e.jpg)
+
+
+## Code
+
+```
+ int ledPin = 9; //for define digital pin 9
+void setup() {
+ 
+ pinMode(ledPin, OUTPUT);//define ledPin as an OUTPUT
+ 
+}
+
+void loop() {
+  
+ digitalWrite(ledPin, HIGH);//set LED on
+ delay(1000);//wait for 1000 millisecond or 1 second
+ digitalWrite(ledPin, LOW);//set the LED off
+ delay(1000);
+ 
+}
+
+```
+
+## Output
+> The LED is blinked with a time interval of 1 second
+
+<iframe width="560" height="315"
+src="https://user-images.githubusercontent.com/65575529/149672340-460ec5e3-e8bc-4bc4-b402-690c4b059678.mp4"
+frameborder="1" 
+allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen></iframe>
+
+
+
+
+
+
