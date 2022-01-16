@@ -200,21 +200,30 @@ allowfullscreen></iframe>
 ####When the button is pressed
 >pin A is connected to pin B
 >![bswitch 2 2](https://user-images.githubusercontent.com/65575529/149669498-5c8db0f6-dd25-477a-a045-52c9e8fa94b9.jpg)
-
+####IN arduino
+>When using in a arduino circuit  
+>One button's pin is connected to VCC or GND. The other pin is connected to an Arduino pin.  
+>By reading the state of Arduino's pin(configured as INPUT pin),we can detect the button is PRESSED or NOT
 
 ## Components Required
 1) Arduino Uno Board  
 2) USB Cable  
-3) LED (Any Color) x 6 Nos  
-4) 220 OHM Resistor X 6 Nos  
-5) Breadboard  
-6) Jumper Wires (Male to Male ) X 7 Nos  
+3) Red M5 LED x 1 Nos  
+4) 220 OHM Resistor X 1 Nos  
+5) 10k OHM Resistor X 1 Nos  
+6) Breadboard  
+7) Jumper Wires (Male to Male ) X 6 Nos  
 
 ## Circuit Diagram
->![chassingled](https://user-images.githubusercontent.com/65575529/147982393-3f7de39e-75dd-4a33-ad05-b5ce8cf77d57.jpg)
+###Circuit
+>![wQGca_3102_1628160139](https://user-images.githubusercontent.com/65575529/149670082-71b1ec34-9ced-416d-a37c-35e51eebf66f.png)
+
+###Breadboard Connection
+>![button_switch_1](https://user-images.githubusercontent.com/65575529/149670135-5faed472-4734-4c47-a3e3-4448e6710812.jpg)
 
 
->![chassingled 1](https://user-images.githubusercontent.com/65575529/147984256-e506289e-74b1-493e-bf39-91e353162bc2.jpg)
+>
+
 
 
 ## Code
@@ -246,7 +255,7 @@ void loop()
 ```
 
 ## Output
-> The LEDs are turning ON and OFF  one by one  giving a chassing effect.
+> The LED turns ON when the Button switch is PRESSED and turns OFF when the button is released.
 
 <iframe width="560" height="315"
 src="https://user-images.githubusercontent.com/65575529/147984271-15c6ac84-86ce-4f27-a67e-bfb62ce1d0c4.mp4"
