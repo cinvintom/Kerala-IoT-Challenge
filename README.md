@@ -196,10 +196,12 @@ allowfullscreen></iframe>
 ### Working
 #### When the button is not pressed
 >pin A is NOT connected to pin B
-><iframe width="560" height="315"![bswitch 2 1](https://user-images.githubusercontent.com/65575529/149669471-5a0970f1-f04e-42d5-ab77-c44ec2adbb98.jpg)></iframe>
+><img src="https://user-images.githubusercontent.com/65575529/149669471-5a0970f1-f04e-42d5-ab77-c44ec2adbb98.jpg" width="200" />
+
 #### When the button is pressed
 >pin A is connected to pin B
->![bswitch 2 2](https://user-images.githubusercontent.com/65575529/149669498-5c8db0f6-dd25-477a-a045-52c9e8fa94b9.jpg)
+><img src="https://user-images.githubusercontent.com/65575529/149669498-5c8db0f6-dd25-477a-a045-52c9e8fa94b9.jpg" width="200" />
+
 #### IN arduino
 >When using in a arduino circuit  
 >One button's pin is connected to VCC or GND. The other pin is connected to an Arduino pin.  
