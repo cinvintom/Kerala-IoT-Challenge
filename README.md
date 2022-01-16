@@ -313,7 +313,7 @@ allowfullscreen></iframe>
 
 ## RGB LED
 >![tGwYE_3102_1628160546](https://user-images.githubusercontent.com/65575529/149672732-9c578614-0fb0-47fd-b0e5-5dd12d753cf8.png)
->The RGB led consists of three different led’s, from the name you can guess that these led’s are red, green and blue. We can obtain many other colors by mixing up these colors.   
+>  The RGB led consists of three different led’s, from the name you can guess that these led’s are red, green and blue. We can obtain many other colors by mixing up these colors.   
 >The Arduino has a analog write function which will help us in obtaining different colors for Arduino RGB led.
 ####Pinout 
 >![image](https://user-images.githubusercontent.com/65575529/149673473-7e9c06eb-8cd8-44b6-9016-ba84e8574ca4.png)
@@ -376,17 +376,6 @@ frameborder="1"
 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>
 
-
-
-
-
-
-
-
-
-https://user-images.githubusercontent.com/65575529/149674751-c1792491-1bd2-4233-b606-d02c192c55ae.mp4
-
-![rgb4](https://user-images.githubusercontent.com/65575529/149674756-dbe5d7c9-e55f-40f0-ac21-11d7cf93ca6e.jpg)
 
 
 
