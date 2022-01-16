@@ -194,9 +194,9 @@ allowfullscreen></iframe>
 >Button switch usually have four pins.  
 >BUT These pins are internally connected in pairs, So we only need to use TWO of the four pins, WHICH ARE NOT INTERNALLY CONNECTED
 ### Working
-####When the button is not pressed
+#### When the button is not pressed
 >pin A is NOT connected to pin B
->![bswitch 2 1](https://user-images.githubusercontent.com/65575529/149669471-5a0970f1-f04e-42d5-ab77-c44ec2adbb98.jpg)
+><iframe width="560" height="315"![bswitch 2 1](https://user-images.githubusercontent.com/65575529/149669471-5a0970f1-f04e-42d5-ab77-c44ec2adbb98.jpg)></iframe>
 #### When the button is pressed
 >pin A is connected to pin B
 >![bswitch 2 2](https://user-images.githubusercontent.com/65575529/149669498-5c8db0f6-dd25-477a-a045-52c9e8fa94b9.jpg)
