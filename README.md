@@ -185,3 +185,72 @@ frameborder="0"
 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>
 
+# Exp 4 : Button Controlled LED
+>In this expiriment we are going to learn how to add a Button Switch as INPUT in arduino circuit.
+
+## Button Switch
+>The Button is called pushbutton, tactile button or momentary switch, It is a basic and simple component used in arduino to give an INPUT.
+### Pinout
+>Button switch usually have four pins.  
+>BUT These pins are internally connected in pairs, So we only need to use TWO of the four pins, WHICH ARE NOT INTERNALLY CONNECTED
+### Working
+####When the button is not pressed
+>pin A is NOT connected to pin B
+>![bswitch 2 1](https://user-images.githubusercontent.com/65575529/149669471-5a0970f1-f04e-42d5-ab77-c44ec2adbb98.jpg)
+####When the button is pressed
+>pin A is connected to pin B
+>![bswitch 2 2](https://user-images.githubusercontent.com/65575529/149669498-5c8db0f6-dd25-477a-a045-52c9e8fa94b9.jpg)
+
+
+## Components Required
+1) Arduino Uno Board  
+2) USB Cable  
+3) LED (Any Color) x 6 Nos  
+4) 220 OHM Resistor X 6 Nos  
+5) Breadboard  
+6) Jumper Wires (Male to Male ) X 7 Nos  
+
+## Circuit Diagram
+>![chassingled](https://user-images.githubusercontent.com/65575529/147982393-3f7de39e-75dd-4a33-ad05-b5ce8cf77d57.jpg)
+
+
+>![chassingled 1](https://user-images.githubusercontent.com/65575529/147984256-e506289e-74b1-493e-bf39-91e353162bc2.jpg)
+
+
+## Code
+
+```
+int ledpin=11;// initialize pin 11
+int inpin=7;// initialize pin 7
+int val;// define val
+
+void setup()
+{
+  pinMode(ledpin,OUTPUT);// set LED pin as “output”
+  pinMode(inpin,INPUT);// set button pin as “input”
+}
+
+void loop()
+{
+  val=digitalRead(inpin);// read the level value of pin 7 and assign to val
+  if(val==LOW)// check if the button is pressed, if yes, turn on the LED
+  {
+    digitalWrite(ledpin,LOW);
+  }
+  else
+  {
+    digitalWrite(ledpin,HIGH);
+  }
+}
+
+```
+
+## Output
+> The LEDs are turning ON and OFF  one by one  giving a chassing effect.
+
+<iframe width="560" height="315"
+src="https://user-images.githubusercontent.com/65575529/147984271-15c6ac84-86ce-4f27-a67e-bfb62ce1d0c4.mp4"
+frameborder="0" 
+allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen></iframe>
+
