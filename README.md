@@ -197,10 +197,10 @@ allowfullscreen></iframe>
 ####When the button is not pressed
 >pin A is NOT connected to pin B
 >![bswitch 2 1](https://user-images.githubusercontent.com/65575529/149669471-5a0970f1-f04e-42d5-ab77-c44ec2adbb98.jpg)
-####When the button is pressed
+#### When the button is pressed
 >pin A is connected to pin B
 >![bswitch 2 2](https://user-images.githubusercontent.com/65575529/149669498-5c8db0f6-dd25-477a-a045-52c9e8fa94b9.jpg)
-####IN arduino
+#### IN arduino
 >When using in a arduino circuit  
 >One button's pin is connected to VCC or GND. The other pin is connected to an Arduino pin.  
 >By reading the state of Arduino's pin(configured as INPUT pin),we can detect the button is PRESSED or NOT
@@ -215,10 +215,10 @@ allowfullscreen></iframe>
 7) Jumper Wires (Male to Male ) X 6 Nos  
 
 ## Circuit Diagram
-###Circuit
+### Circuit
 >![wQGca_3102_1628160139](https://user-images.githubusercontent.com/65575529/149670082-71b1ec34-9ced-416d-a37c-35e51eebf66f.png)
 
-###Breadboard Connection
+### Breadboard Connection
 >![button_switch_1](https://user-images.githubusercontent.com/65575529/149670135-5faed472-4734-4c47-a3e3-4448e6710812.jpg)
 
 
