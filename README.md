@@ -711,3 +711,68 @@ frameborder="1"
 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>
 
+# Exp 11 :Potentiometer analog Value Reading
+>In this experiment, we are going to learn how to read analog value from Potentiometer.
+
+## Potentiometer 
+>![image](https://user-images.githubusercontent.com/65575529/151678925-f5a5fe62-ea4f-4ea0-8c99-db7b2e31f67b.png)
+
+>  a variable resistor with a third adjustable terminal. The potential at the third terminal can be adjusted to give any fraction of the potential across the ends of the resistor. 
+>  Potentiometer made using plastic and having a small size  is called Preset  
+>  ![image](https://user-images.githubusercontent.com/65575529/151679011-acf02dd0-4f5d-4b44-bf63-ffe08318fcc8.png)
+
+
+## Components Required
+1) Arduino Uno Board  
+2) USB Cable  
+3) 10KΩ Potentiometer x 1 Nos  
+4) Breadboard  
+5) Jumper Wires (Male to Male ) X 3 Nos  
+
+## Circuit Diagram
+### Circuit
+>![image](https://user-images.githubusercontent.com/65575529/151679099-8a5335a1-0e2d-4b64-af2a-315001ca23bb.png)
+
+### Breadboard Connection
+>![image](https://user-images.githubusercontent.com/65575529/151679178-af5ed399-7f74-4359-9f4c-d7d0c74945ee.png)
+
+>![ldr3](https://user-images.githubusercontent.com/65575529/151670631-7baaf449-e905-463d-86de-c6b130c393aa.jpg)
+
+
+
+## Code
+
+```
+int potpin = 0; // initialize analog pin 0
+int ledpin = 13; // initialize digital pin 13
+int val=0; // define val, assign initial value 0
+void setup()
+{
+  pinMode (ledpin, OUTPUT); // set digital pin as “output”
+  Serial.begin(9600); // set baud rate at 9600
+}
+void loop()
+{
+  digitalWrite(ledpin, HIGH); // turn on the LED on pin 13
+  delay(50); // wait for 0.05 second
+  digitalWrite(ledpin, LOW); // turn off the LED on pin 13
+  delay(50);
+  val = analogRead(potpin); // read the analog value of analog pin 0, and assign it to val 
+  Serial.println(val); // display val’s value
+}
+
+```
+
+## Output
+> As the knob of the potentiometer turns the value displaying on the serial monitor is also changing.    
+>![image](https://user-images.githubusercontent.com/65575529/151679523-3b0734c4-0b4d-4b4a-b58d-ff25fe054e52.png)
+
+
+
+<iframe width="560" height="315"
+src="https://user-images.githubusercontent.com/65575529/151670993-696ff0b8-09d6-4fdb-b587-78ca38bed8ee.mp4"
+frameborder="1" 
+allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen></iframe>
+
+
