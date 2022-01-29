@@ -379,69 +379,68 @@ allowfullscreen></iframe>
 # Exp 7 : LDR Light Sensor
 >In this experiment, we are going to learn how to use an LDR light sensor to create an Arduino circuit that gives a response to variation in light.
 
-## RGB LED
->![tGwYE_3102_1628160546](https://user-images.githubusercontent.com/65575529/149672732-9c578614-0fb0-47fd-b0e5-5dd12d753cf8.png)
->  The RGB led consists of three different led’s, from the name you can guess that these LEDs are red, green, and blue. We can obtain many other colors by mixing up these colors.   
->The Arduino has an analog write function which will help us in obtaining different colors for Arduino RGB led.
-#### Pinout 
->![image](https://user-images.githubusercontent.com/65575529/149673473-7e9c06eb-8cd8-44b6-9016-ba84e8574ca4.png)
+## LDR Light Sensor
+>![ldr 1](https://user-images.githubusercontent.com/65575529/151667911-be762301-51fe-4416-becd-a3f65e94bee2.jpg)
+
+>  An LDR is a component that has a (variable) resistance that changes with the light intensity that falls upon it. This allows them to be used in light sensing circuits. Light Dependent Resistors (LDR) is also called photoresistors. They are made of high-resistance semiconductor material.
+
+#### working 
+> when light falls on the LDR then the resistance decreases and increases in the dark. When it is placed in a dark room then the resistance will be infinite(high) and act as an open circuit. As the intensity of light increases, the resistance will decrease and act as a closed circuit.
 
 
 ## Components Required
 1) Arduino Uno Board  
 2) USB Cable  
-3) RGB LED x 1 Nos   
-4) Breadboard  
-5) Jumper Wires (Male to Male ) X 5 Nos  
+3) Red M5 LED x 1 Nos  
+4) 10KΩ Resistor x 1 Nos  
+5) 220Ω Resistor x 1 Nos  
+6) Breadboard  
+7) Jumper Wires (Male to Male ) X 5 Nos  
 
 ## Circuit Diagram
 ### Circuit
->![rgb2](https://user-images.githubusercontent.com/65575529/149672805-1a75bdcd-2f97-4a4d-acb1-b2baff04cf27.png)
+>![H7NxL_3102_1628756051](https://user-images.githubusercontent.com/65575529/151670509-864c40c6-439c-4711-94af-16d9c7228f53.png)
 
 ### Breadboard Connection
->![rgb1](https://user-images.githubusercontent.com/65575529/149674781-c9d78e24-3007-4103-9e73-8fb5457065fa.jpg)
+>![ldr 2 circuit](https://user-images.githubusercontent.com/65575529/151670527-c460fa60-5adb-4395-a6ce-93019059dd40.jpg)
 
 
->![rgb4](https://user-images.githubusercontent.com/65575529/149674747-b65afd18-76ba-4c6f-addd-4694e8d95b2b.jpg)
+>![ldr3](https://user-images.githubusercontent.com/65575529/151670631-7baaf449-e905-463d-86de-c6b130c393aa.jpg)
+
 
 
 ## Code
 
 ```
-int redpin = 11; //select the pin for the red LED
-int bluepin = 10; //select the pin for the blue LED
-int greenpin = 9; //select the pin for the green LED
-int val;
-
+int potpin = 0; // initialize analog pin 0, connected with photovaristor
+int ledpin = 11; // initialize digital pin 11
+int val = 0; // initialize variable val
 void setup()
 {
-  pinMode(redpin,OUTPUT);
-  pinMode(redpin,OUTPUT);
-  pinMode(redpin,OUTPUT);
-  Serial.begin(9600);//to begin serial communication
+  pinMode (ledpin,OUTPUT); // set digital pin 11 as “output”
+  Serial.begin(9600); //to begin serial communication
 }
 
 void loop()
 {
-  for(val=0;val<255;val++)
-  {
-    analogWrite(11, val);
-    analogWrite(10, 255-val);
-    analogWrite(9, 128-val);
-    delay(1);
-  }
-  Serial.println(val, DEC);
+  val = analogRead(potpin); // read the value of the sensor and assign it to val
+  Serial.println(val); // display the value of val
+  analogWrite(ledpin,val/4); // set up brightness（maximum value 255）
+  delay(10); // wait for 0.01s
 }
 
 ```
 
 ## Output
-> The RGB LED started blinking in different colors.
+> The brightness of the LED reduced as the intensity of the light source increased. When the light source is removed, the LED lights up in full brightness.
 
 <iframe width="560" height="315"
-src="https://user-images.githubusercontent.com/65575529/149674754-a64eba40-5a82-42ab-af19-88cd843172a8.mp4"
+src="https://user-images.githubusercontent.com/65575529/151670993-696ff0b8-09d6-4fdb-b587-78ca38bed8ee.mp4"
 frameborder="1" 
 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>
+
+
+
 
 
