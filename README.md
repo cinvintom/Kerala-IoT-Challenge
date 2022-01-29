@@ -570,10 +570,12 @@ void loop()
 ```
 
 ## Output
-> When the Arduino starts working the temperature of the room is displayed on the serial monitor in celsius.
+> When the Arduino starts working the temperature of the room is displayed on the serial monitor in celsius.    
+> ![image](https://user-images.githubusercontent.com/65575529/151675250-76e90eb7-c362-4a2d-ac40-b90a4c9fd25d.png)
 
 
-<iframe width="400" height="300"
+
+<iframe width="560" height="315"
 src="https://user-images.githubusercontent.com/65575529/151670993-696ff0b8-09d6-4fdb-b587-78ca38bed8ee.mp4"
 frameborder="1" 
 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
@@ -642,7 +644,7 @@ void loop()
 > When the Arduino starts working the temperature of the room is displayed on the serial monitor in celsius.
 
 
-<iframe width="400" height="300"
+<iframe width="560" height="315"
 src="https://user-images.githubusercontent.com/65575529/151670993-696ff0b8-09d6-4fdb-b587-78ca38bed8ee.mp4"
 frameborder="1" 
 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
