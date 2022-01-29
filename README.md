@@ -548,34 +548,30 @@ allowfullscreen></iframe>
 ## Code
 
 ```
-int flame=0;// select analog pin 0 for the sensor
-int Beep=9;// select digital pin 9 for the buzzer
-int val=0;// initialize variable
-void setup() 
+int potPin = 0;  // initialize analog pin 0 for LM35 temperature sensor
+void setup()
 {
-   pinMode(Beep,OUTPUT);// set LED pin as “output”
-   pinMode(flame,INPUT);// set buzzer pin as “input”
-   Serial.begin(9600);// set baud rate at “9600”
-} 
-void loop() 
-{ 
-  val=analogRead(flame);// read the analog value of the sensor 
-  Serial.println(val);// output and display the analog value
-  if(val>=20)// when the analog value is larger than 20, the buzzer will buzz
-  {  
-    digitalWrite(Beep,HIGH); 
-  }
-  else 
-  {  
-     digitalWrite(Beep,LOW); 
-  }
-   delay(500); 
+  Serial.begin(9600);
 }
+
+void loop()
+{
+  int val; // define variable
+  int dat; // define variable
+  val = analogRead(potPin); // read the analog value of the sensor and assign it to val
+  dat = (125*val)>>8; // temperature calculation formula
+  Serial.print("Tep"); // output and display characters beginning with Tep
+  Serial.print(dat); // output and display value of dat
+  Serial.println("C"); // display “C” characters
+  delay(500); // wait for 0.5 second
+}
+
 
 ```
 
 ## Output
-> When the FLAME source came near the IR sensor the buzzer started to make a sound.
+> When the Arduino starts working the temperature of the room is displayed on the serial monitor in celsius.
+
 
 <iframe width="400" height="300"
 src="https://user-images.githubusercontent.com/65575529/151670993-696ff0b8-09d6-4fdb-b587-78ca38bed8ee.mp4"
@@ -583,5 +579,72 @@ frameborder="1"
 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>
 
+# Exp 9 : LM35 Temperature Sensor
+>In this experiment, we are going to learn how to use an LM35 Temperature Sensor for measuring room temperature.
 
+## LM35 Temperature Sensor
+>![image](https://user-images.githubusercontent.com/65575529/151673742-f6a31e35-ebfe-48e6-a76b-0653e7b5dce8.png)
+
+>  LM35 temperature sensor can produce different voltage by different temperature  
+>When temperature is 0 ℃, it outputs 0V;  
+>if increasing 1 ℃, the output voltage will increase 10 mv.  
+>The output temperature is 0℃～100℃,  
+>the conversion formula is as follows: 
+>![image](https://user-images.githubusercontent.com/65575529/151673867-c3e1eadd-f27b-4bf4-8792-ccbb47e7037a.png)
+####Note
+>LM35 is a widely used temperature sensor with many different package types. At room temperature, it can achieve the accuracy of ±1/4°C without additional calibration processing.
+
+## Components Required
+1) Arduino Uno Board  
+2) USB Cable  
+3) LM35 x 1 Nos  
+4) Breadboard  
+5) Jumper Wires (Male to Male ) X 5 Nos  
+
+## Circuit Diagram
+### Circuit
+>![image](https://user-images.githubusercontent.com/65575529/151673942-75daf01d-0707-402d-b957-3325039c7ebb.png)
+
+
+### Breadboard Connection
+>![image](https://user-images.githubusercontent.com/65575529/151674085-59da70d2-a98d-43bd-b7d0-2c9f7570f7aa.png)
+
+
+>![ldr3](https://user-images.githubusercontent.com/65575529/151670631-7baaf449-e905-463d-86de-c6b130c393aa.jpg)
+
+
+
+## Code
+
+```
+int potPin = 0;  // initialize analog pin 0 for LM35 temperature sensor
+void setup()
+{
+  Serial.begin(9600);
+}
+
+void loop()
+{
+  int val; // define variable
+  int dat; // define variable
+  val = analogRead(potPin); // read the analog value of the sensor and assign it to val
+  dat = (125*val)>>8; // temperature calculation formula
+  Serial.print("Tep"); // output and display characters beginning with Tep
+  Serial.print(dat); // output and display value of dat
+  Serial.println("C"); // display “C” characters
+  delay(500); // wait for 0.5 second
+}
+
+
+```
+
+## Output
+> When the Arduino starts working the temperature of the room is displayed on the serial monitor in celsius.
+
+
+<iframe width="400" height="300"
+src="https://user-images.githubusercontent.com/65575529/151670993-696ff0b8-09d6-4fdb-b587-78ca38bed8ee.mp4"
+frameborder="1" 
+allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen></iframe>
 
