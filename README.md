@@ -522,7 +522,7 @@ allowfullscreen></iframe>
 >The output temperature is 0℃～100℃,  
 >the conversion formula is as follows: 
 >![image](https://user-images.githubusercontent.com/65575529/151673867-c3e1eadd-f27b-4bf4-8792-ccbb47e7037a.png)
-####Note
+#### Note
 >LM35 is a widely used temperature sensor with many different package types. At room temperature, it can achieve the accuracy of ±1/4°C without additional calibration processing.
 
 ## Components Required
@@ -530,7 +530,7 @@ allowfullscreen></iframe>
 2) USB Cable  
 3) LM35 x 1 Nos  
 4) Breadboard  
-5) Jumper Wires (Male to Male ) X 5 Nos  
+5) Jumper Wires (Male to Male ) X 3 Nos  
 
 ## Circuit Diagram
 ### Circuit
@@ -581,35 +581,36 @@ frameborder="1"
 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>
 
-# Exp 9 : LM35 Temperature Sensor
->In this experiment, we are going to learn how to use an LM35 Temperature Sensor for measuring room temperature.
+# Exp 10:IR Remote Control Using TSOP
+>In this experiment, we are going to learn how to use a remote to control the circuit.
 
-## LM35 Temperature Sensor
->![image](https://user-images.githubusercontent.com/65575529/151673742-f6a31e35-ebfe-48e6-a76b-0653e7b5dce8.png)
 
->  LM35 temperature sensor can produce different voltage by different temperature  
->When temperature is 0 ℃, it outputs 0V;  
->if increasing 1 ℃, the output voltage will increase 10 mv.  
->The output temperature is 0℃～100℃,  
->the conversion formula is as follows: 
->![image](https://user-images.githubusercontent.com/65575529/151673867-c3e1eadd-f27b-4bf4-8792-ccbb47e7037a.png)
-####Note
->LM35 is a widely used temperature sensor with many different package types. At room temperature, it can achieve the accuracy of ±1/4°C without additional calibration processing.
+## TSOP - IR Receiver Module
+>![image](https://user-images.githubusercontent.com/65575529/151675570-eb826f93-7238-4025-9d13-d3c5a1eef8a4.png)    
+>![image](https://user-images.githubusercontent.com/65575529/151678043-ba801690-967b-4415-93ec-00c844af8c58.png)
+
+
+>  The signal from the infrared remote controller is a series of binary pulse code. To avoid the other infrared signal interference during the wireless transmission, the signal is pre-modulated at a specific carrier frequency and then send out by an infrared emission diode. The infrared receiving device needs to filter out other waves and receive signals at that specific frequency and to modulate it back to binary pulse code, known as demodulation.
+#### Working
+>  The built-in receiver converts the light signal it received from the sender into feeble electrical signal. The signal will be amplified by the IC amplifier. After automatic gain control, band-pass filtering, demodulation, wave shaping, it returns to the original code. The code is then input to the code identification circuit by the receiver's signal output pin.
 
 ## Components Required
 1) Arduino Uno Board  
 2) USB Cable  
-3) LM35 x 1 Nos  
-4) Breadboard  
-5) Jumper Wires (Male to Male ) X 5 Nos  
+3) Infrared Remote Controller(We can use TV Remote or any other remote) x 1 Nos
+4) Infrared Receiver  
+5) LED   
+   - Red M5 LED x 1 Nos  
+   - Yellow M5 LED x 1 Nos  
+   - Green M5 LED x 1 Nos 
+6) 220Ω Resistor x 3 Nos
+8) Breadboard  
+9) Jumper Wires (Male to Male ) X 8 Nos  
 
 ## Circuit Diagram
-### Circuit
->![image](https://user-images.githubusercontent.com/65575529/151673942-75daf01d-0707-402d-b957-3325039c7ebb.png)
-
 
 ### Breadboard Connection
->![image](https://user-images.githubusercontent.com/65575529/151674085-59da70d2-a98d-43bd-b7d0-2c9f7570f7aa.png)
+>![image](https://user-images.githubusercontent.com/65575529/151678629-220f7910-b590-4440-9179-3abb60b4d8f4.png)
 
 
 >![ldr3](https://user-images.githubusercontent.com/65575529/151670631-7baaf449-e905-463d-86de-c6b130c393aa.jpg)
@@ -619,29 +620,89 @@ allowfullscreen></iframe>
 ## Code
 
 ```
-int potPin = 0;  // initialize analog pin 0 for LM35 temperature sensor
-void setup()
+#include <IRremote.h>
+int RECV_PIN = 9;
+
+int red = 5;
+int green = 6;
+int yellow = 3;
+int val=85;
+
+bool r=false;
+bool w=false;
+bool y=false;
+bool a=false;
+
+IRrecv irrecv(RECV_PIN);
+decode_results results;
+
+void setup() 
 {
   Serial.begin(9600);
+  pinMode(red, OUTPUT);
+  pinMode(green, OUTPUT);
+  pinMode(yellow, OUTPUT);
+  irrecv.enableIRIn();
+  irrecv.blink13(true); 
 }
-
-void loop()
+void loop() 
 {
-  int val; // define variable
-  int dat; // define variable
-  val = analogRead(potPin); // read the analog value of the sensor and assign it to val
-  dat = (125*val)>>8; // temperature calculation formula
-  Serial.print("Tep"); // output and display characters beginning with Tep
-  Serial.print(dat); // output and display value of dat
-  Serial.println("C"); // display “C” characters
-  delay(500); // wait for 0.5 second
-}
-
-
+  if (irrecv.decode(&results)) 
+   {
+     Serial.println(results.value,HEX);
+     delay(100);
+     
+     if(results.value==0x8041A701)
+     {
+        r=!r;
+        digitalWrite(red, r);
+        
+     }
+     
+     else if(results.value==0x8041A702)
+     {
+        w=!w;
+        digitalWrite(green, w);
+        
+     }
+     else if(results.value==0x8041A703)
+     {
+        y=!y;
+        digitalWrite(yellow, y);
+        
+     }  
+    
+     else if(results.value==0x80412704)
+     {
+        if(r||w||y)
+        {
+          a=true;
+          r=false;
+          w=false;
+          y=false;
+                    
+          Serial.println("a=true");
+        }
+        a=!a;
+        digitalWrite(red, a);
+        digitalWrite(green, a);
+        digitalWrite(yellow, a);        
+        if(a)
+        {
+         r=true;
+         w=true;
+         y=true; 
+        }
+     }
+         
+     irrecv.resume(); // Receive the next value
+   }
+  
+}  
 ```
 
 ## Output
-> When the Arduino starts working the temperature of the room is displayed on the serial monitor in celsius.
+> When one key is pressed in the remote corresponding led turns ON. again the same key is pressed the LED turns OFF.
 
 
 <iframe width="560" height="315"
