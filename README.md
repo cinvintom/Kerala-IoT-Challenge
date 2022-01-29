@@ -775,4 +775,190 @@ frameborder="1"
 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>
 
+# Exp 12 : 7 Segment Display
+>In this experiment, we are going to learn how to add an 7 Segment Display as OUTPUT in the Arduino circuit.
+  
+## 7 Segment Display 
+>![image](https://user-images.githubusercontent.com/65575529/151679760-8347a20b-39b6-49aa-a202-ec39e7cacfad.png)
+
+> 7 segment display is basically a combination of 7 different LED arranged in a manner so that we can use their combination to produce numerical values from 0 to 9.  
+>  Some of them have the 8th segment which helps to display decimal points.
+
+### pinout
+>![image](https://user-images.githubusercontent.com/65575529/151679909-68085635-9a66-434a-b7bb-05409651febe.png)
+
+## Components Required
+1) Arduino Uno Board  
+2) USB Cable 
+3) 1-digit LED Segment Display x 1 Nos  
+4) 220Ω Potentiometer x 8 Nos  
+5) Breadboard  
+6) Jumper Wires (Male to Male ) X 3 Nos  
+
+## Circuit Diagram
+### Circuit
+>![image](https://user-images.githubusercontent.com/65575529/151679961-1779ff0d-8c5d-4728-a084-9254c008e876.png)
+
+### Breadboard Connection
+>![image](https://user-images.githubusercontent.com/65575529/151680287-fbc6b560-4364-46f0-ab50-5fe725bf2815.png)
+
+>![ldr3](https://user-images.githubusercontent.com/65575529/151670631-7baaf449-e905-463d-86de-c6b130c393aa.jpg)
+
+
+
+## Code
+
+```
+int a=7;// set digital pin 7 for segment a
+int b=6;// set digital pin 6 for segment b
+int c=5;// set digital pin 5 for segment c
+int d=10;// set digital pin 10 for segment d
+int e=11;// set digital pin 11 for segment e
+int f=8;// set digital pin 8 for segment f
+int g=9;// set digital pin 9 for segment g
+int dp=4;// set digital pin 4 for segment dp
+void digital_0(void) // display number 5
+{
+unsigned char j;
+digitalWrite(a,HIGH);
+digitalWrite(b,HIGH);
+digitalWrite(c,HIGH);
+digitalWrite(d,HIGH);
+digitalWrite(e,HIGH);
+digitalWrite(f,HIGH);
+digitalWrite(g,LOW);
+digitalWrite(dp,LOW);
+}
+void digital_1(void) // display number 1
+{
+unsigned char j;
+digitalWrite(c,HIGH);// set level as “high” for pin 5, turn on segment c
+digitalWrite(b,HIGH);// turn on segment b
+for(j=7;j<=11;j++)// turn off other segments
+digitalWrite(j,LOW);
+digitalWrite(dp,LOW);// turn off segment dp
+}
+void digital_2(void) // display number 2
+{
+unsigned char j;
+digitalWrite(b,HIGH);
+digitalWrite(a,HIGH);
+for(j=9;j<=11;j++)
+digitalWrite(j,HIGH);
+digitalWrite(dp,LOW);
+digitalWrite(c,LOW);
+digitalWrite(f,LOW);
+}
+void digital_3(void) // display number 3
+{digitalWrite(g,HIGH);
+digitalWrite(a,HIGH);
+digitalWrite(b,HIGH);
+digitalWrite(c,HIGH);
+digitalWrite(d,HIGH);
+digitalWrite(dp,LOW);
+digitalWrite(f,LOW);
+digitalWrite(e,LOW);
+}
+void digital_4(void) // display number 4
+{digitalWrite(c,HIGH);
+digitalWrite(b,HIGH);
+digitalWrite(f,HIGH);
+digitalWrite(g,HIGH);
+digitalWrite(dp,LOW);
+digitalWrite(a,LOW);
+digitalWrite(e,LOW);
+digitalWrite(d,LOW);
+}
+void digital_5(void) // display number 5
+{
+unsigned char j;
+digitalWrite(a,HIGH);
+digitalWrite(b, LOW);
+digitalWrite(c,HIGH);
+digitalWrite(d,HIGH);
+digitalWrite(e, LOW);
+digitalWrite(f,HIGH);
+digitalWrite(g,HIGH);
+digitalWrite(dp,LOW);
+}
+void digital_6(void) // display number 6
+{
+unsigned char j;
+for(j=7;j<=11;j++)
+digitalWrite(j,HIGH);
+digitalWrite(c,HIGH);
+digitalWrite(dp,LOW);
+digitalWrite(b,LOW);
+}
+void digital_7(void) // display number 7
+{
+unsigned char j;
+for(j=5;j<=7;j++)
+digitalWrite(j,HIGH);
+digitalWrite(dp,LOW);
+for(j=8;j<=11;j++)
+digitalWrite(j,LOW);
+}
+void digital_8(void) // display number 8
+{
+unsigned char j;
+for(j=5;j<=11;j++)
+digitalWrite(j,HIGH);
+digitalWrite(dp,LOW);
+}
+void digital_9(void) // display number 5
+{
+unsigned char j;
+digitalWrite(a,HIGH);
+digitalWrite(b,HIGH);
+digitalWrite(c,HIGH);
+digitalWrite(d,HIGH);
+digitalWrite(e, LOW);
+digitalWrite(f,HIGH);
+digitalWrite(g,HIGH);
+digitalWrite(dp,LOW);
+}
+void setup()
+{
+int i;// set variable
+for(i=4;i<=11;i++)
+pinMode(i,OUTPUT);// set pin 4-11as “output”
+}
+void loop()
+{
+while(1)
+{
+digital_0();// display number 0
+delay(1000);// wait for 1s
+digital_1();// display number 1
+delay(1000);// wait for 1s
+digital_2();// display number 2
+delay(1000); // wait for 1s
+digital_3();// display number 3
+delay(1000); // wait for 1s
+digital_4();// display number 4
+delay(1000); // wait for 1s
+digital_5();// display number 5
+delay(1000); // wait for 1s
+digital_6();// display number 6
+delay(1000); // wait for 1s
+digital_7();// display number 7
+delay(1000); // wait for 1s
+digital_8();// display number 8
+delay(1000); // wait for 1s
+digital_9();// display number 9
+delay(1000); // wait for 1s
+}}
+```
+
+## Output
+> As the power supply is connected in the circuit, the 7 segment display started to count from 0 to 9.   
+
+
+
+<iframe width="560" height="315"
+src="https://user-images.githubusercontent.com/65575529/151670993-696ff0b8-09d6-4fdb-b587-78ca38bed8ee.mp4"
+frameborder="1" 
+allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen></iframe>
 
