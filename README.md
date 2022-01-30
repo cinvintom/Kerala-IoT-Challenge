@@ -505,11 +505,7 @@ void loop()
 > When the FLAME source came near the IR sensor the buzzer started to make a sound.
 
 <iframe width="400" height="300"
-src="
-
-https://user-images.githubusercontent.com/65575529/151684443-2c4f57e9-4e8f-44bc-b2cf-f835c27b82b9.mp4
-
-"
+src="https://user-images.githubusercontent.com/65575529/151684443-2c4f57e9-4e8f-44bc-b2cf-f835c27b82b9.mp4"
 frameborder="1" 
 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>
@@ -1026,7 +1022,7 @@ else
 
 
 <iframe width="560" height="315"
-src="https://user-images.githubusercontent.com/65575529/151670993-696ff0b8-09d6-4fdb-b587-78ca38bed8ee.mp4"
+src="https://user-images.githubusercontent.com/65575529/151692616-0d13c05c-1a18-4251-a976-fa7944d0c1e7.mp4"
 frameborder="1" 
 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>
@@ -1050,8 +1046,8 @@ allowfullscreen></iframe>
 
 ### Breadboard Connection
 >![image](https://user-images.githubusercontent.com/65575529/151682268-bec18561-ab13-43a3-a045-6f10e4f995b3.png)
+>![ass2 3](https://user-images.githubusercontent.com/65575529/151692735-6f662fae-a82c-47fe-ae2a-cdfdff0ec321.jpg)
 
->![ldr3](https://user-images.githubusercontent.com/65575529/151670631-7baaf449-e905-463d-86de-c6b130c393aa.jpg)
 
 
 
@@ -1168,7 +1164,7 @@ if(buttonstate == HIGH)
 
 
 <iframe width="560" height="315"
-src="https://user-images.githubusercontent.com/65575529/151670993-696ff0b8-09d6-4fdb-b587-78ca38bed8ee.mp4"
+src="https://user-images.githubusercontent.com/65575529/151693045-b3247f5b-57ae-4514-b706-805f41e04b0d.mp4"
 frameborder="1" 
 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>
