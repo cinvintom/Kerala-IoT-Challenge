@@ -466,9 +466,9 @@ allowfullscreen></iframe>
 ### Breadboard Connection
 >![FLAME 2](https://user-images.githubusercontent.com/65575529/151672392-92191614-7056-4475-9964-e605616fca5c.jpg)
 
+>![flame 3](https://user-images.githubusercontent.com/65575529/151683409-1f2b76b2-c4d2-4a2c-87e6-49777f861bfd.jpg)
 
 
->![ldr3](https://user-images.githubusercontent.com/65575529/151670631-7baaf449-e905-463d-86de-c6b130c393aa.jpg)
 
 
 
@@ -505,7 +505,7 @@ void loop()
 > When the FLAME source came near the IR sensor the buzzer started to make a sound.
 
 <iframe width="400" height="300"
-src="https://user-images.githubusercontent.com/65575529/151670993-696ff0b8-09d6-4fdb-b587-78ca38bed8ee.mp4"
+src="Uploading foame.mp4…"
 frameborder="1" 
 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>
@@ -541,7 +541,8 @@ allowfullscreen></iframe>
 >![image](https://user-images.githubusercontent.com/65575529/151674085-59da70d2-a98d-43bd-b7d0-2c9f7570f7aa.png)
 
 
->![ldr3](https://user-images.githubusercontent.com/65575529/151670631-7baaf449-e905-463d-86de-c6b130c393aa.jpg)
+>![temp3](https://user-images.githubusercontent.com/65575529/151683450-1de38a2c-3f19-452d-9f2b-53e37576930d.jpg)
+
 
 
 
@@ -576,7 +577,7 @@ void loop()
 
 
 <iframe width="560" height="315"
-src="https://user-images.githubusercontent.com/65575529/151670993-696ff0b8-09d6-4fdb-b587-78ca38bed8ee.mp4"
+src="Uploading temp1.mp4…"
 frameborder="1" 
 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>
@@ -613,7 +614,7 @@ allowfullscreen></iframe>
 >![image](https://user-images.githubusercontent.com/65575529/151678629-220f7910-b590-4440-9179-3abb60b4d8f4.png)
 
 
->![ldr3](https://user-images.githubusercontent.com/65575529/151670631-7baaf449-e905-463d-86de-c6b130c393aa.jpg)
+>![temp3](https://user-images.githubusercontent.com/65575529/151683474-39521a7a-749b-45d3-9cb2-1355322092f3.jpg)
 
 
 
@@ -706,7 +707,11 @@ void loop()
 
 
 <iframe width="560" height="315"
-src="https://user-images.githubusercontent.com/65575529/151670993-696ff0b8-09d6-4fdb-b587-78ca38bed8ee.mp4"
+src="
+
+https://user-images.githubusercontent.com/65575529/151683786-cdffd466-a9c8-4b43-a6db-3faf24b1b38e.mp4
+
+"
 frameborder="1" 
 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>
@@ -736,7 +741,8 @@ allowfullscreen></iframe>
 ### Breadboard Connection
 >![image](https://user-images.githubusercontent.com/65575529/151679178-af5ed399-7f74-4359-9f4c-d7d0c74945ee.png)
 
->![ldr3](https://user-images.githubusercontent.com/65575529/151670631-7baaf449-e905-463d-86de-c6b130c393aa.jpg)
+>![poten1](https://user-images.githubusercontent.com/65575529/151683498-c97cb31a-7daf-4d3d-b20a-7cf26c5a5d21.jpg)
+
 
 
 
@@ -770,8 +776,7 @@ void loop()
 
 
 <iframe width="560" height="315"
-src="https://user-images.githubusercontent.com/65575529/151670993-696ff0b8-09d6-4fdb-b587-78ca38bed8ee.mp4"
-frameborder="1" 
+src="https://user-images.githubusercontent.com/65575529/151683741-3aac358d-849f-4be4-aa80-061f24833a2d.mp4" frameborder="1" 
 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>
 
@@ -800,9 +805,10 @@ allowfullscreen></iframe>
 >![image](https://user-images.githubusercontent.com/65575529/151679961-1779ff0d-8c5d-4728-a084-9254c008e876.png)
 
 ### Breadboard Connection
->![image](https://user-images.githubusercontent.com/65575529/151680287-fbc6b560-4364-46f0-ab50-5fe725bf2815.png)
+>![image](https://user-images.githubusercontent.com/65575529/151680287-fbc6b560-4364-46f0-ab50-5fe725bf2815.png)  
+>![7,2](https://user-images.githubusercontent.com/65575529/151683526-e9723405-2fd4-4264-9166-c5a7263c75f4.jpg)
 
->![ldr3](https://user-images.githubusercontent.com/65575529/151670631-7baaf449-e905-463d-86de-c6b130c393aa.jpg)
+
 
 
 
@@ -957,14 +963,73 @@ delay(1000); // wait for 1s
 
 
 <iframe width="560" height="315"
-src="https://user-images.githubusercontent.com/65575529/151670993-696ff0b8-09d6-4fdb-b587-78ca38bed8ee.mp4"
-frameborder="1" 
+src="https://user-images.githubusercontent.com/65575529/151683685-d111f43e-1073-457c-91a7-eaff375b8dcb.mp4" frameborder="1" 
 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>
 
                         
                         
 # ASSIGNMENTS   
+
+## Assignment 1
+>Create an automatic night lamp model using LDR and LED  
+### Automatic Night Lamp
+
+
+
+## Components Required
+1) Arduino Uno Board  
+2) USB Cable 
+3) LDR module x 1 Nos  
+4) LED x 1 Nos 
+5) 220Ω resistor x 1 Nos  
+6) 10kΩ resistor x 1 Nos 
+7) Breadboard  
+8) Jumper Wires (Male to Male ) X 12 Nos  
+
+## Circuit Diagram
+
+### Breadboard Connection
+>![image](https://user-images.githubusercontent.com/65575529/151683176-471a85ae-dc4a-4c48-bb6c-6c2507433fd9.png)
+>
+>![ldr3](https://user-images.githubusercontent.com/65575529/151670631-7baaf449-e905-463d-86de-c6b130c393aa.jpg)
+
+
+
+## Code
+
+```
+int potpin=0;// initialize analog pin 0, connected with photovaristor
+int ledpin=11;// initialize digital pin 11, 
+int val=0;// initialize variable val
+void setup()
+{
+pinMode(ledpin,OUTPUT);// set digital pin 11 as “output”
+Serial.begin(9600);// set baud rate at “9600”
+}
+void loop()
+{
+val=analogRead(potpin);// read the value of the sensor and assign it to val
+Serial.println(val);// display the value of val
+if(val<=(255))
+  digitalWrite(ledpin,LOW);// set up brightness（maximum value 255）
+else
+  digitalWrite(ledpin,HIGH);
+  delay(10);// wait for 0.01 
+}
+```
+
+## Output
+> When the room becomes dark LED turns ON automatically and turns OFF when dark is over.    
+
+
+
+<iframe width="560" height="315"
+src="https://user-images.githubusercontent.com/65575529/151670993-696ff0b8-09d6-4fdb-b587-78ca38bed8ee.mp4"
+frameborder="1" 
+allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen></iframe>
+
 ## Assignment 2
 >Create a Digital Dice using 7 Segment Display and Push Button  
 ### Digital Dice
@@ -1106,63 +1171,3 @@ src="https://user-images.githubusercontent.com/65575529/151670993-696ff0b8-09d6-
 frameborder="1" 
 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>
-
-## Assignment 2
->Create an automatic night lamp model using LDR and LED  
-### Automatic Night Lamp
-
-
-
-## Components Required
-1) Arduino Uno Board  
-2) USB Cable 
-3) LDR module x 1 Nos  
-4) LED x 1 Nos 
-5) 220Ω resistor x 1 Nos  
-6) 10kΩ resistor x 1 Nos 
-7) Breadboard  
-8) Jumper Wires (Male to Male ) X 12 Nos  
-
-## Circuit Diagram
-
-### Breadboard Connection
->![image](https://user-images.githubusercontent.com/65575529/151683176-471a85ae-dc4a-4c48-bb6c-6c2507433fd9.png)
->
->![ldr3](https://user-images.githubusercontent.com/65575529/151670631-7baaf449-e905-463d-86de-c6b130c393aa.jpg)
-
-
-
-## Code
-
-```
-int potpin=0;// initialize analog pin 0, connected with photovaristor
-int ledpin=11;// initialize digital pin 11, 
-int val=0;// initialize variable val
-void setup()
-{
-pinMode(ledpin,OUTPUT);// set digital pin 11 as “output”
-Serial.begin(9600);// set baud rate at “9600”
-}
-void loop()
-{
-val=analogRead(potpin);// read the value of the sensor and assign it to val
-Serial.println(val);// display the value of val
-if(val<=(255))
-  digitalWrite(ledpin,LOW);// set up brightness（maximum value 255）
-else
-  digitalWrite(ledpin,HIGH);
-  delay(10);// wait for 0.01 
-}
-```
-
-## Output
-> When the room becomes dark LED turns ON automatically and turns OFF when dark is over.    
-
-
-
-<iframe width="560" height="315"
-src="https://user-images.githubusercontent.com/65575529/151670993-696ff0b8-09d6-4fdb-b587-78ca38bed8ee.mp4"
-frameborder="1" 
-allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-allowfullscreen></iframe>
-
