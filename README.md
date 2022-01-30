@@ -1107,4 +1107,62 @@ frameborder="1"
 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>
 
+## Assignment 2
+>Create an automatic night lamp model using LDR and LED  
+### Automatic Night Lamp
+
+
+
+## Components Required
+1) Arduino Uno Board  
+2) USB Cable 
+3) LDR module x 1 Nos  
+4) LED x 1 Nos 
+5) 220Ω resistor x 1 Nos  
+6) 10kΩ resistor x 1 Nos 
+7) Breadboard  
+8) Jumper Wires (Male to Male ) X 12 Nos  
+
+## Circuit Diagram
+
+### Breadboard Connection
+>![image](https://user-images.githubusercontent.com/65575529/151683176-471a85ae-dc4a-4c48-bb6c-6c2507433fd9.png)
+>
+>![ldr3](https://user-images.githubusercontent.com/65575529/151670631-7baaf449-e905-463d-86de-c6b130c393aa.jpg)
+
+
+
+## Code
+
+```
+int potpin=0;// initialize analog pin 0, connected with photovaristor
+int ledpin=11;// initialize digital pin 11, 
+int val=0;// initialize variable val
+void setup()
+{
+pinMode(ledpin,OUTPUT);// set digital pin 11 as “output”
+Serial.begin(9600);// set baud rate at “9600”
+}
+void loop()
+{
+val=analogRead(potpin);// read the value of the sensor and assign it to val
+Serial.println(val);// display the value of val
+if(val<=(255))
+  digitalWrite(ledpin,LOW);// set up brightness（maximum value 255）
+else
+  digitalWrite(ledpin,HIGH);
+  delay(10);// wait for 0.01 
+}
+```
+
+## Output
+> When the room becomes dark LED turns ON automatically and turns OFF when dark is over.    
+
+
+
+<iframe width="560" height="315"
+src="https://user-images.githubusercontent.com/65575529/151670993-696ff0b8-09d6-4fdb-b587-78ca38bed8ee.mp4"
+frameborder="1" 
+allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen></iframe>
 
