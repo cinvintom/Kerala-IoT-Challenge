@@ -988,8 +988,9 @@ allowfullscreen></iframe>
 
 ### Breadboard Connection
 >![image](https://user-images.githubusercontent.com/65575529/151683176-471a85ae-dc4a-4c48-bb6c-6c2507433fd9.png)
->
->![ldr3](https://user-images.githubusercontent.com/65575529/151670631-7baaf449-e905-463d-86de-c6b130c393aa.jpg)
+>![ass1](https://user-images.githubusercontent.com/65575529/151693416-08bde0c7-8dff-4061-9250-534b8562e0fd.jpg)
+
+
 
 
 
