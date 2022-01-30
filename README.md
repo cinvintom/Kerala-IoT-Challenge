@@ -791,9 +791,9 @@ allowfullscreen></iframe>
 1) Arduino Uno Board  
 2) USB Cable 
 3) 1-digit LED Segment Display x 1 Nos  
-4) 220Ω Potentiometer x 8 Nos  
+4) 220Ω Resistor x 8 Nos  
 5) Breadboard  
-6) Jumper Wires (Male to Male ) X 3 Nos  
+6) Jumper Wires (Male to Male ) X 9 Nos  
 
 ## Circuit Diagram
 ### Circuit
@@ -961,4 +961,150 @@ src="https://user-images.githubusercontent.com/65575529/151670993-696ff0b8-09d6-
 frameborder="1" 
 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>
+
+                        
+                        
+# ASSIGNMENTS   
+## Assignment 2
+>Create a Digital Dice using 7 Segment Display and Push Button  
+### Digital Dice
+>![image](https://user-images.githubusercontent.com/65575529/151681505-52062599-1fe2-453e-b875-ab2141fe20cc.png)
+
+
+## Components Required
+1) Arduino Uno Board  
+2) USB Cable 
+3) 1-digit LED Segment Display x 1 Nos  
+4) 220Ω resistor x 8 Nos  
+5) 10kΩ resistor x 1 Nos 
+6) Breadboard  
+7) Jumper Wires (Male to Male ) X 12 Nos  
+
+## Circuit Diagram
+
+### Breadboard Connection
+>![image](https://user-images.githubusercontent.com/65575529/151682268-bec18561-ab13-43a3-a045-6f10e4f995b3.png)
+
+>![ldr3](https://user-images.githubusercontent.com/65575529/151670631-7baaf449-e905-463d-86de-c6b130c393aa.jpg)
+
+
+
+## Code
+
+```
+
+int button = 2; //specifying button
+int a=7;// set digital pin 7 for segment a
+int b=6;// set digital pin 6 for segment b
+int c=5;// set digital pin 5 for segment c
+int d=10;// set digital pin 10 for segment d
+int e=11;// set digital pin 11 for segment e
+int f=8;// set digital pin 8 for segment f
+int g=9;// set digital pin 9 for segment g
+int dp=4;// set digital pin 4 for segment dp
+long num;
+int buttonstate;
+
+
+void digital_1(void) // display number 1
+{
+unsigned char j;
+digitalWrite(c,HIGH);// set level as “high” for pin 5, turn on segment c
+digitalWrite(b,HIGH);// turn on segment b
+for(j=7;j<=11;j++)// turn off other segments
+digitalWrite(j,LOW);
+digitalWrite(dp,LOW);// turn off segment dp
+}
+void digital_2(void) // display number 2
+{
+unsigned char j;
+digitalWrite(b,HIGH);
+digitalWrite(a,HIGH);
+for(j=9;j<=11;j++)
+digitalWrite(j,HIGH);
+digitalWrite(dp,LOW);
+digitalWrite(c,LOW);
+digitalWrite(f,LOW);
+}
+void digital_3(void) // display number 3
+{digitalWrite(g,HIGH);
+digitalWrite(a,HIGH);
+digitalWrite(b,HIGH);
+digitalWrite(c,HIGH);
+digitalWrite(d,HIGH);
+digitalWrite(dp,LOW);
+digitalWrite(f,LOW);
+digitalWrite(e,LOW);
+}
+void digital_4(void) // display number 4
+{digitalWrite(c,HIGH);
+digitalWrite(b,HIGH);
+digitalWrite(f,HIGH);
+digitalWrite(g,HIGH);
+digitalWrite(dp,LOW);
+digitalWrite(a,LOW);
+digitalWrite(e,LOW);
+digitalWrite(d,LOW);
+}
+void digital_5(void) // display number 5
+{
+unsigned char j;
+digitalWrite(a,HIGH);
+digitalWrite(b, LOW);
+digitalWrite(c,HIGH);
+digitalWrite(d,HIGH);
+digitalWrite(e, LOW);
+digitalWrite(f,HIGH);
+digitalWrite(g,HIGH);
+digitalWrite(dp,LOW);
+}
+void digital_6(void) // display number 6
+{
+unsigned char j;
+for(j=7;j<=11;j++)
+digitalWrite(j,HIGH);
+digitalWrite(c,HIGH);
+digitalWrite(dp,LOW);
+digitalWrite(b,LOW);
+}
+
+void setup()
+{
+int i;// set variable
+for(i=4;i<=11;i++)
+pinMode(i,OUTPUT);// set pin 4-11as “output”
+}
+void loop()
+{
+buttonstate = digitalRead(button);
+if(buttonstate == HIGH)
+{
+  num = random(1,7); //Generate random number from 1 to 6.
+  if (num == 1)
+    digital_1();// display number 1
+  if (num == 2)
+    digital_2();// display number 2
+  if (num == 3)
+    digital_3();// display number 3
+  if (num == 4)
+    digital_4();// display number 4
+  if (num == 5)
+    digital_5();// display number 5
+  if (num == 6)
+    digital_6();// display number 6
+ }
+}
+```
+
+## Output
+> When the button is pressed a random number is displayed in the 7 segment display.   
+
+
+
+<iframe width="560" height="315"
+src="https://user-images.githubusercontent.com/65575529/151670993-696ff0b8-09d6-4fdb-b587-78ca38bed8ee.mp4"
+frameborder="1" 
+allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen></iframe>
+
 
